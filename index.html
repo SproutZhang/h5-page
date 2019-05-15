@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/mobileSelect.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>属于你的关键字了解一下</title>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+</head>
+<body>
+<!--loading-->
+<div id="loading">
+    <img src="./assets/images/loading.gif" class="img-loading" alt=""/>
+</div>
+
+<!--alert弹出提示框-->
+<div id="alertBox" style="display: none;">
+    <i class="close">X</i>
+    <img src="assets/images/alert.png" alt="">
+</div>
+
+<!--等待页-->
+<div class="waitingPage" style="display: none">
+    <img src="assets/images/waiting.png" alt="">
+</div>
+
+<!--结果页-->
+<div class="resultPage" style="display: none" id="result1">
+    <img src="assets/images/result/1.png" alt="" class="img1">
+    <img src="assets/images/share.png" alt="" class="img2 sharePage">
+    <img src="assets/images/more.png" alt="" class="img3 viewMore">
+</div>
+<div class="resultPage" style="display: none" id="result2">
+    <img src="assets/images/result/2.png" alt="" class="img1">
+    <img src="assets/images/share.png" alt="" class="img2 sharePage">
+    <img src="assets/images/more.png" alt="" class="img3 viewMore">
+</div>
+<div class="resultPage" style="display: none" id="result3">
+    <img src="assets/images/result/3.png" alt="" class="img1">
+    <img src="assets/images/share.png" alt="" class="img2 sharePage">
+    <img src="assets/images/more.png" alt="" class="img3 viewMore">
+</div>
+<div class="resultPage" style="display: none" id="result4">
+    <img src="assets/images/result/4.png" alt="" class="img1">
+    <img src="assets/images/share.png" alt="" class="img2 sharePage">
+    <img src="assets/images/more.png" alt="" class="img3 viewMore">
+</div>
+<div class="resultPage" style="display: none" id="result5">
+    <img src="assets/images/result/5.png" alt="" class="img1">
+    <img src="assets/images/share.png" alt="" class="img2 sharePage">
+    <img src="assets/images/more.png" alt="" class="img3 viewMore">
+</div>
+<div class="resultPage" style="display: none" id="result6">
+    <img src="assets/images/result/6.png" alt="" class="img1">
+    <img src="assets/images/share.png" alt="" class="img2 sharePage">
+    <img src="assets/images/more.png" alt="" class="img3 viewMore">
+</div>
+<div class="resultPage" style="display: none" id="result7">
+    <img src="assets/images/result/7.png" alt="" class="img1">
+    <img src="assets/images/share.png" alt="" class="img2 sharePage">
+    <img src="assets/images/more.png" alt="" class="img3 viewMore">
+</div>
+<div class="resultPage" style="display: none" id="result8">
+    <img src="assets/images/result/8.png" alt="" class="img1">
+    <img src="assets/images/share.png" alt="" class="img2 sharePage">
+    <img src="assets/images/more.png" alt="" class="img3 viewMore">
+</div>
+<div class="resultPage" style="display: none" id="result9">
+    <img src="assets/images/result/9.png" alt="" class="img1">
+    <img src="assets/images/share.png" alt="" class="img2 sharePage">
+    <img src="assets/images/more.png" alt="" class="img3 viewMore">
+</div>
+
+<!--结果分享页-->
+<div class="resultShare" style="display: none">
+    <img src="assets/images/sharebg.png" alt="">
+</div>
+<!--container-->
+<form action="" method="POST">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <!--page1-->
+            <section class="swiper-slide swiper-slide1">
+                <img src="assets/images/page_1/book.png" class="ani img1" swiper-animate-effect="bounceInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="assets/images/page_1/btn_03.png" class="ani img3 ageBtn" swiper-animate-effect="zoomIn"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="1s">
+                <img src="assets/images/page_1/age_03.png" class="ani img4" swiper-animate-effect="bounceIn"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">
+                <div name="age" id="ageSelected" class="ani" swiper-animate-effect="bounceIn"
+                        swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">199X</div>
+                <img src="assets/images/page_1/btn_03.png" class="ani img5" swiper-animate-effect="zoomIn"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="1.8s">
+                <img src="assets/images/page_1/suan_03.png" class="ani page_next lastimg page_next1" swiper-animate-effect="bounceIn"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="2.2s">
+            </section>
+
+            <!--page2 滚动选择-->
+            <section class="swiper-slide swiper-slide2">
+                <img src="assets/images/page_2/title.png" class="ani img1" swiper-animate-effect="slideInDown"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="assets/images/page_2/cont1.png" class="ani img2" swiper-animate-effect="slideInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="assets/images/page_2/cont2.png" class="ani img2-1 roomBtn" swiper-animate-effect="slideInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <div class="ani roomSelect" id="roomSelected1" swiper-animate-effect="slideInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
+                <img src="assets/images/page_2/cont3.png" class="ani img2-2" swiper-animate-effect="slideInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <div class="ani roomSelect" id="roomSelected2" swiper-animate-effect="slideInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
+                <img src="assets/images/page_2/cont4.png" class="ani img2-3" swiper-animate-effect="slideInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="assets/images/page_2/cont5.png" class="ani img2-4" swiper-animate-effect="slideInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="assets/images/page_2/ice.png" class="ani img3" swiper-animate-effect="slideInLeft"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+                <img src="assets/images/page_2/man.png" class="ani img4" swiper-animate-effect="bounceInLeft"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="1s">
+                <img src="assets/images/page_2/women.png" class="ani img5" swiper-animate-effect="bounceInRight"
+                     swiper-animate-duration="1s" swiper-animate-delay="1s">
+                <img src="assets/images/page_2/CD.png" class="ani img6" swiper-animate-effect="bounceInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="1s">
+                <img src="assets/images/next.png" class="ani page_next lastimg page_next2" swiper-animate-effect="zoomIn"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">
+            </section>
+
+            <!--page3 单选-->
+            <section class="swiper-slide swiper-slide3">
+                <img src="assets/images/page_3/title.png" class="ani img1" swiper-animate-effect="slideInDown"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="assets/images/page_3/qs.png" class="ani img2" swiper-animate-effect="slideInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="assets/images/page_3/left.png" class="ani img3" swiper-animate-effect="bounceInLeft"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+                <img src="assets/images/page_3/right.png" class="ani img4" swiper-animate-effect="bounceInRight"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+                <!--自己买单-->
+                <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page2" value="buySelf" id="buySelf" class="inputbox">
+                    <label for="buySelf"><img src="assets/images/page_3/ac1.png" alt="" class="moveImg1"></label>
+                </p>
+                <!--爸妈全款-->
+                <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page2" value="buyParent" id="buyParent" class="inputbox">
+                    <label for="buyParent"><img src="assets/images/page_3/ac2.png" alt="" class="moveImg1"></label>
+                </p>
+                <!--爸妈首付-->
+                <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page2" value="buyParentFirst" id="buyParentFirst" class="inputbox">
+                    <label for="buyParentFirst"><img src="assets/images/page_3/ac3.png" alt=""
+                                                     class="moveImg1"></label>
+                </p>
+                <!--对半分摊-->
+                <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="1s">
+                    <input type="radio" name="page2" value="buyParentHalf" id="buyParentHalf" class="inputbox">
+                    <label for="buyParentHalf"><img src="assets/images/page_3/ac4.png" alt="" class="moveImg1"></label>
+                </p>
+                <img src="assets/images/page_3/cilcle.png" class="ani img5" swiper-animate-effect="bounceInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="1.2s">
+                <img src="assets/images/page_3/money.png" class="ani img6" swiper-animate-effect="bounceInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="1.4s">
+                <img src="assets/images/next.png" class="ani selectedPage2 lastimg" swiper-animate-effect="zoomIn"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="1.8s">
+            </section>
+
+            <!--page4 单选-->
+            <section class="swiper-slide swiper-slide4">
+                <img src="assets/images/page_4/title.png" class="ani img1" swiper-animate-effect="slideInDown"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="assets/images/page_4/qs.png" class="ani img2" swiper-animate-effect="slideInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="assets/images/page_4/left.png" class="ani img3" swiper-animate-effect="bounceInLeft"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+                <img src="assets/images/page_4/right.png" class="ani img4" swiper-animate-effect="bounceInRight"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+                <!--自己住-->
+                <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page3" value="buySelf" id="liveSelf" class="inputbox">
+                    <label for="liveSelf"><img src="assets/images/page_4/ac1.png" alt="" class="moveImg2"></label>
+                </p>
+                <!--长辈一起住-->
+                <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page3" value="liveTogether" id="liveTogether" class="inputbox">
+                    <label for="liveTogether"><img src="assets/images/page_4/ac2.png" alt="" class="moveImg2"></label>
+                </p>
+                <!--结婚-->
+                <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page3" value="liveMarry" id="liveMarry" class="inputbox">
+                    <label for="liveMarry"><img src="assets/images/page_4/ac3.png" alt="" class="moveImg2"></label>
+                </p>
+                <!--孝敬爸妈-->
+                <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page3" value="liveParent" id="liveParent" class="inputbox">
+                    <label for="liveParent"><img src="assets/images/page_4/ac4.png" alt="" class="moveImg2"></label>
+                </p>
+                <!--买房投资-->
+                <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page3" value="liveHouse" id="liveHouse" class="inputbox">
+                    <label for="liveHouse"><img src="assets/images/page_4/ac5.png" alt="" class="moveImg2"></label>
+                </p>
+                <!--一娃-->
+                <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page3" value="liveABaby" id="liveABaby" class="inputbox">
+                    <label for="liveABaby"><img src="assets/images/page_4/ac6.png" alt="" class="moveImg2"></label>
+                </p>
+                <!--两娃-->
+                <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page3" value="liveBabes" id="liveBabes" class="inputbox">
+                    <label for="liveBabes"><img src="assets/images/page_4/ac7.png" alt="" class="moveImg2"></label>
+                </p>
+                <img src="assets/images/page_4/rode.png" class="ani img5" swiper-animate-effect="bounceInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="1.2s">
+                <img src="assets/images/page_4/human1.png" class="ani img6" swiper-animate-effect="bounceInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="1.4s">
+                <img src="assets/images/page_4/dog1.png" class="ani img7" swiper-animate-effect="bounceInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+                <img src="assets/images/page_4/human2.png" class="ani img8" swiper-animate-effect="fadeIn"
+                     swiper-animate-duration="2s" swiper-animate-delay="2s">
+                <img src="assets/images/page_4/dog2.png" class="ani img9" swiper-animate-effect="fadeIn"
+                     swiper-animate-duration="2s" swiper-animate-delay="2s">
+                <img src="assets/images/next.png" class="ani selectedPage3 lastimg" swiper-animate-effect="zoomIn"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="1.8s">
+            </section>
+
+            <!--page5 单选-->
+            <section class="swiper-slide swiper-slide5">
+                <img src="assets/images/page_5/title.png" class="ani img1" swiper-animate-effect="slideInDown"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="assets/images/page_5/qs.png" class="ani img2" swiper-animate-effect="slideInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <!--自己说的算-->
+                <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page4" value="self" id="self">
+                    <label for="self"><img src="assets/images/page_5/ac1.png" alt="" class="moveImg3"></label>
+                </p>
+                <!--听妈妈的话-->
+                <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page4" value="mom" id="mom" class="inputbox">
+                    <label for="mom"><img src="assets/images/page_5/ac2.png" alt="" class="moveImg3"></label>
+                </p>
+                <!--民主投票-->
+                <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page4" value="vote" id="vote" class="inputbox">
+                    <label for="vote"><img src="assets/images/page_5/ac3.png" alt="" class="moveImg3"></label>
+                </p>
+                <img src="assets/images/page_5/bt1.png" class="ani img3" swiper-animate-effect="bounceInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0.8s">
+                <img src="assets/images/page_5/bt2.png" class="ani img4" swiper-animate-effect="fadeIn"
+                     swiper-animate-duration="2s" swiper-animate-delay="1.2s">
+                <img src="assets/images/page_5/next.png" class="ani selectedPage4 lastimg" swiper-animate-effect="zoomIn"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">
+            </section>
+
+            <!--page6 多选-->
+            <section class="swiper-slide swiper-slide6">
+                <img src="assets/images/page_6/title.png" class="ani img1" swiper-animate-effect="slideInDown"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="assets/images/page_6/qs.png" class="ani img2" swiper-animate-effect="slideInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <!--洗衣服务-->
+                <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="checkbox" name="page6" value="wash" id="wash" class="chechbox1">
+                    <label for="wash"><img src="assets/images/page_6/ac1.png" alt="" class="moveImgs1"></label>
+                </p>
+                <!--物业维修-->
+                <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="checkbox" name="page6" value="repair" id="repair" class="chechbox1">
+                    <label for="repair"><img src="assets/images/page_6/ac2.png" alt="" class="moveImgs1"></label>
+                </p>
+                <!--物业保安-->
+                <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="checkbox" name="page6" value="safety" id="safety" class="chechbox1">
+                    <label for="safety"><img src="assets/images/page_6/ac3.png" alt="" class="moveImgs1"></label>
+                </p>
+                <!--随缘-->
+                <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="checkbox" name="page6" value="random" id="random" class="chechbox1">
+                    <label for="random"><img src="assets/images/page_6/ac4.png" alt="" class="moveImgs1"></label>
+                </p>
+                <img src="assets/images/page_6/cao.png" class="ani img3" swiper-animate-effect="fadeInLeft"
+                     swiper-animate-duration="1s" swiper-animate-delay="0.8s">
+                <img src="assets/images/page_6/window.png" class="ani img4" swiper-animate-effect="fadeInRight"
+                     swiper-animate-duration="1s" swiper-animate-delay="1.2s">
+                <img src="assets/images/page_6/pic.png" class="ani img5" swiper-animate-effect="fadeInLeft"
+                     swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+                <img src="assets/images/page_6/car.png" class="ani img6" swiper-animate-effect="fadeInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="1.8s">
+                <img src="assets/images/page_6/sleep.png" class="ani img7" swiper-animate-effect="fadeInDown"
+                     swiper-animate-duration="1s" swiper-animate-delay="1.8s">
+                <img src="assets/images/page_6/bottom.png" class="ani img8" swiper-animate-effect="fadeInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="1.8s">
+                <img src="assets/images/next.png" class="ani selectedCheckbox1 lastimg" swiper-animate-effect="zoomIn"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="2.5s">
+            </section>
+
+            <!--page7 多选-->
+            <section class="swiper-slide swiper-slide7">
+                <img src="assets/images/page_7/title.png" class="ani img1" swiper-animate-effect="slideInDown"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="assets/images/page_7/qs.png" class="ani img2" swiper-animate-effect="slideInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <!--便利店-->
+                <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="checkbox" name="page7" value="shop" id="shop" class="chechbox2">
+                    <label for="shop"><img src="assets/images/page_7/ac1.png" alt="" class="moveImgs2"></label>
+                </p>
+                <!--快递代收-->
+                <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="checkbox" name="page7" value="express" id="express" class="chechbox2">
+                    <label for="express"><img src="assets/images/page_7/ac2.png" alt="" class="moveImgs2"></label>
+                </p>
+                <!--宠物代看-->
+                <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="checkbox" name="page7" value="pet" id="pet" class="chechbox2">
+                    <label for="pet"><img src="assets/images/page_7/ac3.png" alt="" class="moveImgs2"></label>
+                </p>
+                <!--健身器材-->
+                <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="checkbox" name="page7" value="body" id="body" class="chechbox2">
+                    <label for="body"><img src="assets/images/page_7/ac4.png" alt="" class="moveImgs2"></label>
+                </p>
+                <!--随缘-->
+                <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="checkbox" name="page7" value="random1" id="random1" class="chechbox2">
+                    <label for="random1"><img src="assets/images/page_7/ac5.png" alt="" class="moveImgs2"></label>
+                </p>
+                <img src="assets/images/page_7/ball.png" class="ani img3" swiper-animate-effect="bounceIn"
+                     swiper-animate-duration="1s" swiper-animate-delay="0.8s">
+                <img src="assets/images/page_7/pic.png" class="ani img4" swiper-animate-effect="bounceInRight"
+                     swiper-animate-duration="0.3s" swiper-animate-delay="1.2s">
+                <img src="assets/images/page_7/dog1.png" class="ani img5" swiper-animate-effect="bounceInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="1.8s">
+                <img src="assets/images/page_7/dog2.png" class="ani img6" swiper-animate-effect="bounceInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+                <img src="assets/images/next.png" class="ani selectedCheckbox2 lastimg" swiper-animate-effect="zoomIn"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="2.5s">
+            </section>
+
+            <!--page8 单选-->
+            <section class="swiper-slide swiper-slide8">
+                <img src="assets/images/page_8/title.png" class="ani img1" swiper-animate-effect="slideInDown"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="assets/images/page_8/qs.png" class="ani img2" swiper-animate-effect="slideInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <!--没车-->
+                <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page8" value="nocar" id="nocar" class="inputbox">
+                    <label for="nocar"><img src="assets/images/page_8/ac1.png" alt="" class="moveImgs3"></label>
+                </p>
+                <!--停车位-->
+                <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1.2s">
+                    <input type="radio" name="page8" value="parking" id="parking" class="inputbox">
+                    <label for="parking"><img src="assets/images/page_8/ac2.png" alt="" class="moveImgs3"></label>
+                </p>
+                <!--不差钱-->
+                <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1s">
+                    <input type="radio" name="page8" value="rich" id="rich" class="inputbox">
+                    <label for="rich"><img src="assets/images/page_8/ac3.png" alt="" class="moveImgs3"></label>
+                </p>
+                <!--只要车不要车位-->
+                <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s"
+                   swiper-animate-delay="1.2s">
+                    <input type="radio" name="page8" value="onlycar" id="onlycar" class="inputbox">
+                    <label for="onlycar"><img src="assets/images/page_8/ac4.png" alt="" class="moveImgs3"></label>
+                </p>
+                <img src="assets/images/page_8/top.png" class="ani img3" swiper-animate-effect="bounceIn"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">
+                <img src="assets/images/page_8/line.png" class="ani img4" swiper-animate-effect="bounceInUp"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">
+                <img src="assets/images/page_8/car.png" class="ani img5" swiper-animate-effect="bounceInLeft"
+                     swiper-animate-duration="1s" swiper-animate-delay="1s">
+                <img src="assets/images/page_8/bottom.png" class="ani img6" swiper-animate-effect="bounceInRight"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">
+                <img src="assets/images/page_8/bird.png" class="ani img7" swiper-animate-effect="bounceInUp"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">
+                <img src="assets/images/page_8/water.png" class="ani img8" swiper-animate-effect="bounceInUp"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">
+                <img src="assets/images/page_8/left.png" class="ani img9" swiper-animate-effect="bounceInRight"
+                     swiper-animate-duration="1s" swiper-animate-delay="1.3s">
+                <img src="assets/images/page_8/shit.png" class="ani img10" swiper-animate-effect="bounceInRight"
+                     swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+                <img src="assets/images/next.png" class="ani selectedCheckbox3 lastimg" swiper-animate-effect="zoomIn"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="2.5s">
+            </section>
+
+            <!--page9 排序-->
+            <section class="swiper-slide swiper-slide9">
+                <img src="assets/images/page_9/title.png" class="ani img1" swiper-animate-effect="slideInDown"
+                     swiper-animate-duration="1.5s" swiper-animate-delay="0s">
+                <img src="assets/images/page_9/qs.png" class="ani img2" swiper-animate-effect="slideInUp"
+                     swiper-animate-duration="1.5s" swiper-animate-delay="0s">
+                <img src="assets/images/page_9/order1.png" class="ani img3" swiper-animate-effect="bounceInDown"
+                     swiper-animate-duration="1.5s" swiper-animate-delay="0.5s">
+                <img src="assets/images/page_9/order2.png" class="ani img4" swiper-animate-effect="bounceInDown"
+                     swiper-animate-duration="1.5s" swiper-animate-delay="0.8s">
+                <img src="assets/images/page_9/order3.png" class="ani img5" swiper-animate-effect="bounceInDown"
+                     swiper-animate-duration="1.5s" swiper-animate-delay="1.1s">
+                <img src="assets/images/page_9/order4.png" class="ani img6" swiper-animate-effect="bounceInDown"
+                     swiper-animate-duration="1.5s" swiper-animate-delay="1.4s">
+                <img src="assets/images/page_9/order5.png" class="ani img7" swiper-animate-effect="bounceInDown"
+                     swiper-animate-duration="1.5s" swiper-animate-delay="1.7s">
+                <div id="sort" class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s"
+                     swiper-animate-delay="0s">
+                        <div src="assets/images/page_9/ac1.png" alt="" class="first moveBox"></div>
+                        <div src="assets/images/page_9/ac2.png" alt="" class="second moveBox"></div>
+                        <div src="assets/images/page_9/ac3.png" alt="" class="third moveBox"></div>
+                        <div src="assets/images/page_9/ac4.png" alt="" class="fourth moveBox"></div>
+                        <div src="assets/images/page_9/ac5.png" alt="" class="fifth moveBox"></div>
+                </div>
+                <img src="assets/images/next.png" class="ani page_next lastimg page_next8" swiper-animate-effect="zoomIn"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="2s">
+            </section>
+
+            <!--page10 滚动选择-->
+            <section class="swiper-slide swiper-slide10">
+                <img src="assets/images/page_10/title.png" class="ani img1" swiper-animate-effect="slideInDown"
+                     swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="assets/images/page_10/building.png" class="ani img2" swiper-animate-effect="fadeIn"
+                     swiper-animate-duration="2s" swiper-animate-delay="1s">
+                <img src="assets/images/page_10/bottom.png" class="ani img3" swiper-animate-effect="fadeInUp"
+                     swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+                <img src="assets/images/page_10/kid.png" class="ani img4" swiper-animate-effect="fadeIn"
+                     swiper-animate-duration="2s" swiper-animate-delay="1.5s">
+                <img src="assets/images/page_10/cake.png" class="ani img5" swiper-animate-effect="fadeIn"
+                     swiper-animate-duration="2s" swiper-animate-delay="2s">
+                <img src="assets/images/page_10/word1.png" class="ani img6" swiper-animate-effect="fadeIn"
+                     swiper-animate-duration="1s" swiper-animate-delay="2s">
+                <img src="assets/images/page_10/word2.png" class="ani img7 livingBtn" swiper-animate-effect="fadeIn"
+                     swiper-animate-duration="1s" swiper-animate-delay="2.5s">
+                <div class="ani livingSelect" id="livingNow" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+                     swiper-animate-delay="3s"></div>
+                <img src="assets/images/page_10/word3.png" class="ani img9" swiper-animate-effect="fadeInDown"
+                     swiper-animate-duration="1s" swiper-animate-delay="3.5s">
+                <img src="assets/images/page_10/word4.png" class="ani img10" swiper-animate-effect="fadeIn"
+                     swiper-animate-duration="1s" swiper-animate-delay="4s">
+                <div class="ani livingSelect" id="livingWill" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+                     swiper-animate-delay="4.5s"></div>
+                <img src="assets/images/next.png" class="ani lastPage page_next lastimg page_next10" swiper-animate-effect="zoomIn"
+                     swiper-animate-duration="0.5s" swiper-animate-delay="5s">
+            </section>
+        </div>
+
+        <!--music-->
+        <div class="music play" id="btn-music">
+            <img src="assets/images/music.png" alt="">
+        </div>
+    </div>
+</form>
+
+<div style="display: none;">
+    <audio src="assets/music/bgmin.mp3" loop="loop" autoplay="autoplay" id="music-bg" onload="this.play()"></audio>
+    <audio src="assets/music/click.mp3" id="music-click"></audio>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/swiper.animate.min.js"></script>
+<script src="assets/js/Sortable.js"></script>
+<script src="assets/js/mobileSelect.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
